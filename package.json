@@ -1,0 +1,39 @@
+{
+  "scripts": {
+    "test": "mocha test/test-auth.js"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "handlebars": "^4.0.11",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.0.12",
+    "mongoose-type-email": "^1.0.5",
+    "mongoose-url-slugs": "^1.0.2"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.5",
+    "mock-require": "^3.0.1"
+  },
+  "name": "final-project-ait",
+  "description": "The content below is an example project proposal / requirements document. Replace the text below the lines marked \"__TODO__\" with details specific to your project. Remove the \"TODO\" lines.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nyu-csci-ua-0480-008-spring-2018/mh4722-final-project.git"
+  },
+  "keywords": [
+    "web",
+    "app"
+  ],
+  "author": "Muhammad Hassan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nyu-csci-ua-0480-008-spring-2018/mh4722-final-project/issues"
+  },
+  "homepage": "https://github.com/nyu-csci-ua-0480-008-spring-2018/mh4722-final-project#readme"
+}
