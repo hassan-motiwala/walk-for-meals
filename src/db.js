@@ -4,26 +4,27 @@ const mongoose = require('mongoose');
 const User = new mongoose.Schema({
 	fullName: String,
 	userName: {type: String, unique: true, required: true},
-	email: {type: String, required: true},
+	email: String,
 	password: {type: String, required: true},
 	commits: Number,
     totalCommits: Number
 });
 
-const Restaurent = new mongoose.Schema({
-	restaurentName: String,
+const Restaurant = new mongoose.Schema({
+	restaurantName: String,
 	userName: {type: String, required: true},
 	email: {type: String, required: true},
 	password: {type: String, required: true},
+	contact: String,
 	location: String,
 	totalDeliveries: String
 });
 
-const Location = new mongoose.Schema({ 
-	userId: String,
+const Location = new mongoose.Schema({
+	userName: String,
 	location: String,
 	comments: String,
-	restaurentId: String
+	restaurantId: String
 });
 
 const Discount = new mongoose.Schema({
@@ -33,9 +34,8 @@ const Discount = new mongoose.Schema({
 });
 
 
-
 mongoose.model('User', User);
-mongoose.model('Restaurent', Restaurent);
+mongoose.model('Restaurant', Restaurant);
 mongoose.model('Location', Location);
 mongoose.model('Discount', Discount);
 
