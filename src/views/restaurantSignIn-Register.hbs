@@ -1,0 +1,61 @@
+<title>Sign In - Walk for Meals</title>
+<link href="../../bootstrap-3.3.7/docs/examples/justified-nav/justified-nav.css" rel="stylesheet" type="text/css">
+<link href="../../bootstrap-3.3.7/docs/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="../../bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet" type="text/css">
+<link href="../../bootstrap-3.3.7/docs/examples/signin/signin.css" rel="stylesheet" type="text/css">
+<script src="../../bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js"></script>
+
+
+<div class="masthead">
+  <h3 class="text-muted" style="text-align: center; font-size: 45px;">Walk for Meals</h3>
+  <nav>
+    <ul class="nav nav-justified">
+      <li><a href="../">Home</a></li>
+      <li><a href="../../user/signIn">User Login/Sign Up</a></li>
+      <li><a href= "#">About Us</a></li>
+      <li class = "active"><a href="../../restaurant/signIn">Restaurant Login/Sign Up</a></li>
+      <li><a href="../../users/location">User's Contributions</a></li>
+    </ul>
+  </nav>
+</div>
+
+{{#if error}}
+  <h3>{{ error }}</h3>
+{{/if}}
+
+<form class="form-signin" action="../../restaurant/signIn" method="POST">
+  <h2 class="form-signin-heading">Please sign in</h2>
+  <label for="userName" class="sr-only">Username</label>
+  <input type="userName" id="inputUsername" class="form-control" name="userName" placeholder="Username" required autofocus>
+  <label for="password" class="sr-only">Password</label>
+  <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="remember-me">Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+</form>
+
+<form class="form-register" action="../../restaurant/register" method="POST">
+  <h2 class="form-signin-heading">Please register if you are new</h2>
+  <label for="restaurantName" class="sr-only">Restaurant Name</label>
+  <input type="text" class="form-control" name="restaurantName" placeholder="Restaurant Name" required autofocus>
+  
+  <label for="userName" class="sr-only">Username</label>
+  <input type="text" class="form-control" name="userName" placeholder="Username | Atleast 8 characters" required autofocus>
+  
+  <label for="email" class="sr-only">Email address</label>
+  <input type="email" class="form-control" name="email" placeholder="Email address" required autofocus>
+  
+  <label for="password" class="sr-only">Password</label>
+  <input type="password" class="form-control" name="password" placeholder="Password | Atleast 8 characters" required>
+
+  <label for="contact" class="sr-only">Contact</label>
+  <input type="text" class="form-control" name="contact" placeholder="Contact" required>
+
+  <label for="location" class="sr-only">Location</label>
+  <input type="text" class="form-control" name="location" placeholder="Location" required>
+  
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+</form>

@@ -108,19 +108,10 @@ An Example User:
 
 ## Research Topics
 
-(5 points) Integrate user authentication
-	* I'm going to be using passport for user authentication
-	* And account has been made for testing; I'll email you the password
-
-(4 points) Perform client side form validation using a JavaScript library
-	* see cs.nyu.edu/~jversoza/ait-final/my-form
-	* if you put in a number that's greater than 5, an error message will appear in the dom
-
-(5 points) vue.js
-	* used vue.js as the frontend framework; it's a challenging library to learn, so I've assigned it 5 points
+	* Google Maps API
+	* Bootstrap
 
 10 points total out of 8 required points
-
 
 ## [Link to Initial Main Project File](app.js) 
 
