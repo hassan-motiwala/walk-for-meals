@@ -1,0 +1,366 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/bin/npm', 'install' ]
+2 info using npm@1.3.6
+3 info using node@v0.10.48
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/home/mh4722/opt/mh4722-final-project',
+5 verbose install   [ 'bcrypt',
+5 verbose install     'bcryptjs',
+5 verbose install     'express',
+5 verbose install     'express-session',
+5 verbose install     'handlebars',
+5 verbose install     'hbs',
+5 verbose install     'mongoose',
+5 verbose install     'mongoose-type-email',
+5 verbose install     'mongoose-url-slugs',
+5 verbose install     'chai',
+5 verbose install     'mocha',
+5 verbose install     'mock-require' ] ]
+6 info preinstall final-project-ait@1.0.0
+7 warn package.json bcrypt-pbkdf@1.0.1 No repository field.
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping bcrypt@^1.0.3 /home/mh4722/opt/mh4722-final-project
+10 verbose cache add [ 'bcryptjs@^2.4.3', null ]
+11 verbose cache add name=undefined spec="bcryptjs@^2.4.3" args=["bcryptjs@^2.4.3",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'bcryptjs@^2.4.3',
+12 verbose parsed url   path: 'bcryptjs@^2.4.3',
+12 verbose parsed url   href: 'bcryptjs@^2.4.3' }
+13 verbose cache add name="bcryptjs" spec="^2.4.3" args=["bcryptjs","^2.4.3"]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: '^2.4.3',
+14 verbose parsed url   path: '^2.4.3',
+14 verbose parsed url   href: '^2.4.3' }
+15 verbose addNamed [ 'bcryptjs', '^2.4.3' ]
+16 verbose addNamed [ null, '>=2.4.3-0 <3.0.0-0' ]
+17 verbose already installed skipping express@^4.16.3 /home/mh4722/opt/mh4722-final-project
+18 verbose already installed skipping express-session@^1.15.6 /home/mh4722/opt/mh4722-final-project
+19 verbose already installed skipping handlebars@^4.0.11 /home/mh4722/opt/mh4722-final-project
+20 verbose cache add [ 'hbs@^4.0.1', null ]
+21 verbose cache add name=undefined spec="hbs@^4.0.1" args=["hbs@^4.0.1",null]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: 'hbs@^4.0.1',
+22 verbose parsed url   path: 'hbs@^4.0.1',
+22 verbose parsed url   href: 'hbs@^4.0.1' }
+23 verbose cache add name="hbs" spec="^4.0.1" args=["hbs","^4.0.1"]
+24 verbose parsed url { protocol: null,
+24 verbose parsed url   slashes: null,
+24 verbose parsed url   auth: null,
+24 verbose parsed url   host: null,
+24 verbose parsed url   port: null,
+24 verbose parsed url   hostname: null,
+24 verbose parsed url   hash: null,
+24 verbose parsed url   search: null,
+24 verbose parsed url   query: null,
+24 verbose parsed url   pathname: '^4.0.1',
+24 verbose parsed url   path: '^4.0.1',
+24 verbose parsed url   href: '^4.0.1' }
+25 verbose addNamed [ 'hbs', '^4.0.1' ]
+26 verbose addNamed [ null, '>=4.0.1-0 <5.0.0-0' ]
+27 verbose already installed skipping mongoose@^5.0.12 /home/mh4722/opt/mh4722-final-project
+28 verbose cache add [ 'mongoose-type-email@^1.0.5', null ]
+29 verbose cache add name=undefined spec="mongoose-type-email@^1.0.5" args=["mongoose-type-email@^1.0.5",null]
+30 verbose parsed url { protocol: null,
+30 verbose parsed url   slashes: null,
+30 verbose parsed url   auth: null,
+30 verbose parsed url   host: null,
+30 verbose parsed url   port: null,
+30 verbose parsed url   hostname: null,
+30 verbose parsed url   hash: null,
+30 verbose parsed url   search: null,
+30 verbose parsed url   query: null,
+30 verbose parsed url   pathname: 'mongoose-type-email@^1.0.5',
+30 verbose parsed url   path: 'mongoose-type-email@^1.0.5',
+30 verbose parsed url   href: 'mongoose-type-email@^1.0.5' }
+31 verbose cache add name="mongoose-type-email" spec="^1.0.5" args=["mongoose-type-email","^1.0.5"]
+32 verbose parsed url { protocol: null,
+32 verbose parsed url   slashes: null,
+32 verbose parsed url   auth: null,
+32 verbose parsed url   host: null,
+32 verbose parsed url   port: null,
+32 verbose parsed url   hostname: null,
+32 verbose parsed url   hash: null,
+32 verbose parsed url   search: null,
+32 verbose parsed url   query: null,
+32 verbose parsed url   pathname: '^1.0.5',
+32 verbose parsed url   path: '^1.0.5',
+32 verbose parsed url   href: '^1.0.5' }
+33 verbose addNamed [ 'mongoose-type-email', '^1.0.5' ]
+34 verbose addNamed [ null, '>=1.0.5-0 <2.0.0-0' ]
+35 verbose cache add [ 'mongoose-url-slugs@^1.0.2', null ]
+36 verbose cache add name=undefined spec="mongoose-url-slugs@^1.0.2" args=["mongoose-url-slugs@^1.0.2",null]
+37 verbose parsed url { protocol: null,
+37 verbose parsed url   slashes: null,
+37 verbose parsed url   auth: null,
+37 verbose parsed url   host: null,
+37 verbose parsed url   port: null,
+37 verbose parsed url   hostname: null,
+37 verbose parsed url   hash: null,
+37 verbose parsed url   search: null,
+37 verbose parsed url   query: null,
+37 verbose parsed url   pathname: 'mongoose-url-slugs@^1.0.2',
+37 verbose parsed url   path: 'mongoose-url-slugs@^1.0.2',
+37 verbose parsed url   href: 'mongoose-url-slugs@^1.0.2' }
+38 verbose cache add name="mongoose-url-slugs" spec="^1.0.2" args=["mongoose-url-slugs","^1.0.2"]
+39 verbose parsed url { protocol: null,
+39 verbose parsed url   slashes: null,
+39 verbose parsed url   auth: null,
+39 verbose parsed url   host: null,
+39 verbose parsed url   port: null,
+39 verbose parsed url   hostname: null,
+39 verbose parsed url   hash: null,
+39 verbose parsed url   search: null,
+39 verbose parsed url   query: null,
+39 verbose parsed url   pathname: '^1.0.2',
+39 verbose parsed url   path: '^1.0.2',
+39 verbose parsed url   href: '^1.0.2' }
+40 verbose addNamed [ 'mongoose-url-slugs', '^1.0.2' ]
+41 verbose addNamed [ null, '>=1.0.2-0 <2.0.0-0' ]
+42 verbose cache add [ 'chai@^4.1.2', null ]
+43 verbose cache add name=undefined spec="chai@^4.1.2" args=["chai@^4.1.2",null]
+44 verbose parsed url { protocol: null,
+44 verbose parsed url   slashes: null,
+44 verbose parsed url   auth: null,
+44 verbose parsed url   host: null,
+44 verbose parsed url   port: null,
+44 verbose parsed url   hostname: null,
+44 verbose parsed url   hash: null,
+44 verbose parsed url   search: null,
+44 verbose parsed url   query: null,
+44 verbose parsed url   pathname: 'chai@^4.1.2',
+44 verbose parsed url   path: 'chai@^4.1.2',
+44 verbose parsed url   href: 'chai@^4.1.2' }
+45 verbose cache add name="chai" spec="^4.1.2" args=["chai","^4.1.2"]
+46 verbose parsed url { protocol: null,
+46 verbose parsed url   slashes: null,
+46 verbose parsed url   auth: null,
+46 verbose parsed url   host: null,
+46 verbose parsed url   port: null,
+46 verbose parsed url   hostname: null,
+46 verbose parsed url   hash: null,
+46 verbose parsed url   search: null,
+46 verbose parsed url   query: null,
+46 verbose parsed url   pathname: '^4.1.2',
+46 verbose parsed url   path: '^4.1.2',
+46 verbose parsed url   href: '^4.1.2' }
+47 verbose addNamed [ 'chai', '^4.1.2' ]
+48 verbose addNamed [ null, '>=4.1.2-0 <5.0.0-0' ]
+49 verbose cache add [ 'mocha@^5.0.5', null ]
+50 verbose cache add name=undefined spec="mocha@^5.0.5" args=["mocha@^5.0.5",null]
+51 verbose parsed url { protocol: null,
+51 verbose parsed url   slashes: null,
+51 verbose parsed url   auth: null,
+51 verbose parsed url   host: null,
+51 verbose parsed url   port: null,
+51 verbose parsed url   hostname: null,
+51 verbose parsed url   hash: null,
+51 verbose parsed url   search: null,
+51 verbose parsed url   query: null,
+51 verbose parsed url   pathname: 'mocha@^5.0.5',
+51 verbose parsed url   path: 'mocha@^5.0.5',
+51 verbose parsed url   href: 'mocha@^5.0.5' }
+52 verbose cache add name="mocha" spec="^5.0.5" args=["mocha","^5.0.5"]
+53 verbose parsed url { protocol: null,
+53 verbose parsed url   slashes: null,
+53 verbose parsed url   auth: null,
+53 verbose parsed url   host: null,
+53 verbose parsed url   port: null,
+53 verbose parsed url   hostname: null,
+53 verbose parsed url   hash: null,
+53 verbose parsed url   search: null,
+53 verbose parsed url   query: null,
+53 verbose parsed url   pathname: '^5.0.5',
+53 verbose parsed url   path: '^5.0.5',
+53 verbose parsed url   href: '^5.0.5' }
+54 verbose addNamed [ 'mocha', '^5.0.5' ]
+55 verbose addNamed [ null, '>=5.0.5-0 <6.0.0-0' ]
+56 verbose cache add [ 'mock-require@^3.0.1', null ]
+57 verbose cache add name=undefined spec="mock-require@^3.0.1" args=["mock-require@^3.0.1",null]
+58 verbose parsed url { protocol: null,
+58 verbose parsed url   slashes: null,
+58 verbose parsed url   auth: null,
+58 verbose parsed url   host: null,
+58 verbose parsed url   port: null,
+58 verbose parsed url   hostname: null,
+58 verbose parsed url   hash: null,
+58 verbose parsed url   search: null,
+58 verbose parsed url   query: null,
+58 verbose parsed url   pathname: 'mock-require@^3.0.1',
+58 verbose parsed url   path: 'mock-require@^3.0.1',
+58 verbose parsed url   href: 'mock-require@^3.0.1' }
+59 verbose cache add name="mock-require" spec="^3.0.1" args=["mock-require","^3.0.1"]
+60 verbose parsed url { protocol: null,
+60 verbose parsed url   slashes: null,
+60 verbose parsed url   auth: null,
+60 verbose parsed url   host: null,
+60 verbose parsed url   port: null,
+60 verbose parsed url   hostname: null,
+60 verbose parsed url   hash: null,
+60 verbose parsed url   search: null,
+60 verbose parsed url   query: null,
+60 verbose parsed url   pathname: '^3.0.1',
+60 verbose parsed url   path: '^3.0.1',
+60 verbose parsed url   href: '^3.0.1' }
+61 verbose addNamed [ 'mock-require', '^3.0.1' ]
+62 verbose addNamed [ null, '>=3.0.1-0 <4.0.0-0' ]
+63 silly lockFile 0bcd462c-bcryptjs-2-4-3 bcryptjs@^2.4.3
+64 verbose lock bcryptjs@^2.4.3 /home/mh4722/.npm/0bcd462c-bcryptjs-2-4-3.lock
+65 silly lockFile 3bee7b95-hbs-4-0-1 hbs@^4.0.1
+66 verbose lock hbs@^4.0.1 /home/mh4722/.npm/3bee7b95-hbs-4-0-1.lock
+67 silly lockFile 20f85608-mongoose-type-email-1-0-5 mongoose-type-email@^1.0.5
+68 verbose lock mongoose-type-email@^1.0.5 /home/mh4722/.npm/20f85608-mongoose-type-email-1-0-5.lock
+69 silly lockFile c634d43f-mongoose-url-slugs-1-0-2 mongoose-url-slugs@^1.0.2
+70 verbose lock mongoose-url-slugs@^1.0.2 /home/mh4722/.npm/c634d43f-mongoose-url-slugs-1-0-2.lock
+71 silly lockFile bcea83f6-chai-4-1-2 chai@^4.1.2
+72 verbose lock chai@^4.1.2 /home/mh4722/.npm/bcea83f6-chai-4-1-2.lock
+73 silly lockFile b686dcb7-mocha-5-0-5 mocha@^5.0.5
+74 verbose lock mocha@^5.0.5 /home/mh4722/.npm/b686dcb7-mocha-5-0-5.lock
+75 silly lockFile 55eeebe9-mock-require-3-0-1 mock-require@^3.0.1
+76 verbose lock mock-require@^3.0.1 /home/mh4722/.npm/55eeebe9-mock-require-3-0-1.lock
+77 silly addNameRange { name: 'bcryptjs', range: '>=2.4.3-0 <3.0.0-0', hasData: false }
+78 silly addNameRange { name: 'mongoose-type-email',
+78 silly addNameRange   range: '>=1.0.5-0 <2.0.0-0',
+78 silly addNameRange   hasData: false }
+79 silly addNameRange { name: 'mongoose-url-slugs',
+79 silly addNameRange   range: '>=1.0.2-0 <2.0.0-0',
+79 silly addNameRange   hasData: false }
+80 silly addNameRange { name: 'mock-require',
+80 silly addNameRange   range: '>=3.0.1-0 <4.0.0-0',
+80 silly addNameRange   hasData: false }
+81 verbose url raw bcryptjs
+82 verbose url resolving [ 'https://registry.npmjs.org/', './bcryptjs' ]
+83 verbose url resolved https://registry.npmjs.org/bcryptjs
+84 info trying registry request attempt 1 at 13:39:06
+85 http GET https://registry.npmjs.org/bcryptjs
+86 verbose url raw mongoose-type-email
+87 verbose url resolving [ 'https://registry.npmjs.org/', './mongoose-type-email' ]
+88 verbose url resolved https://registry.npmjs.org/mongoose-type-email
+89 info trying registry request attempt 1 at 13:39:06
+90 http GET https://registry.npmjs.org/mongoose-type-email
+91 verbose url raw mongoose-url-slugs
+92 verbose url resolving [ 'https://registry.npmjs.org/', './mongoose-url-slugs' ]
+93 verbose url resolved https://registry.npmjs.org/mongoose-url-slugs
+94 info trying registry request attempt 1 at 13:39:06
+95 http GET https://registry.npmjs.org/mongoose-url-slugs
+96 silly addNameRange { name: 'hbs', range: '>=4.0.1-0 <5.0.0-0', hasData: false }
+97 silly addNameRange { name: 'chai', range: '>=4.1.2-0 <5.0.0-0', hasData: false }
+98 silly addNameRange { name: 'mocha', range: '>=5.0.5-0 <6.0.0-0', hasData: false }
+99 verbose url raw mock-require
+100 verbose url resolving [ 'https://registry.npmjs.org/', './mock-require' ]
+101 verbose url resolved https://registry.npmjs.org/mock-require
+102 info trying registry request attempt 1 at 13:39:06
+103 http GET https://registry.npmjs.org/mock-require
+104 verbose url raw hbs
+105 verbose url resolving [ 'https://registry.npmjs.org/', './hbs' ]
+106 verbose url resolved https://registry.npmjs.org/hbs
+107 info trying registry request attempt 1 at 13:39:06
+108 http GET https://registry.npmjs.org/hbs
+109 verbose url raw chai
+110 verbose url resolving [ 'https://registry.npmjs.org/', './chai' ]
+111 verbose url resolved https://registry.npmjs.org/chai
+112 info trying registry request attempt 1 at 13:39:06
+113 http GET https://registry.npmjs.org/chai
+114 verbose url raw mocha
+115 verbose url resolving [ 'https://registry.npmjs.org/', './mocha' ]
+116 verbose url resolved https://registry.npmjs.org/mocha
+117 info trying registry request attempt 1 at 13:39:06
+118 http GET https://registry.npmjs.org/mocha
+119 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+120 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+121 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+122 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+123 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+124 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+125 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+126 info trying registry request attempt 2 at 13:39:16
+127 http GET https://registry.npmjs.org/bcryptjs
+128 info trying registry request attempt 2 at 13:39:16
+129 http GET https://registry.npmjs.org/mock-require
+130 info trying registry request attempt 2 at 13:39:16
+131 http GET https://registry.npmjs.org/hbs
+132 info trying registry request attempt 2 at 13:39:16
+133 http GET https://registry.npmjs.org/mongoose-url-slugs
+134 info trying registry request attempt 2 at 13:39:16
+135 http GET https://registry.npmjs.org/mongoose-type-email
+136 info trying registry request attempt 2 at 13:39:16
+137 http GET https://registry.npmjs.org/mocha
+138 info trying registry request attempt 2 at 13:39:16
+139 http GET https://registry.npmjs.org/chai
+140 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+141 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+142 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+143 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+144 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+145 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+146 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+147 info trying registry request attempt 3 at 13:40:16
+148 http GET https://registry.npmjs.org/hbs
+149 info trying registry request attempt 3 at 13:40:16
+150 http GET https://registry.npmjs.org/bcryptjs
+151 info trying registry request attempt 3 at 13:40:16
+152 http GET https://registry.npmjs.org/mongoose-type-email
+153 info trying registry request attempt 3 at 13:40:16
+154 http GET https://registry.npmjs.org/mock-require
+155 info trying registry request attempt 3 at 13:40:16
+156 http GET https://registry.npmjs.org/mongoose-url-slugs
+157 info trying registry request attempt 3 at 13:40:16
+158 http GET https://registry.npmjs.org/chai
+159 info trying registry request attempt 3 at 13:40:16
+160 http GET https://registry.npmjs.org/mocha
+161 silly lockFile 20f85608-mongoose-type-email-1-0-5 mongoose-type-email@^1.0.5
+162 silly lockFile 20f85608-mongoose-type-email-1-0-5 mongoose-type-email@^1.0.5
+163 silly lockFile 3bee7b95-hbs-4-0-1 hbs@^4.0.1
+164 silly lockFile 3bee7b95-hbs-4-0-1 hbs@^4.0.1
+165 silly lockFile 55eeebe9-mock-require-3-0-1 mock-require@^3.0.1
+166 silly lockFile 55eeebe9-mock-require-3-0-1 mock-require@^3.0.1
+167 silly lockFile 0bcd462c-bcryptjs-2-4-3 bcryptjs@^2.4.3
+168 silly lockFile 0bcd462c-bcryptjs-2-4-3 bcryptjs@^2.4.3
+169 silly lockFile c634d43f-mongoose-url-slugs-1-0-2 mongoose-url-slugs@^1.0.2
+170 silly lockFile c634d43f-mongoose-url-slugs-1-0-2 mongoose-url-slugs@^1.0.2
+171 error Error: CERT_UNTRUSTED
+171 error     at SecurePair.<anonymous> (tls.js:1430:32)
+171 error     at SecurePair.emit (events.js:92:17)
+171 error     at SecurePair.maybeInitFinished (tls.js:1029:10)
+171 error     at CleartextStream.read [as _read] (tls.js:521:13)
+171 error     at CleartextStream.Readable.read (_stream_readable.js:341:10)
+171 error     at EncryptedStream.write [as _write] (tls.js:418:25)
+171 error     at doWrite (_stream_writable.js:226:10)
+171 error     at writeOrBuffer (_stream_writable.js:216:5)
+171 error     at EncryptedStream.Writable.write (_stream_writable.js:183:11)
+171 error     at write (_stream_readable.js:602:24)
+171 error     at flow (_stream_readable.js:611:7)
+171 error     at Socket.pipeOnReadable (_stream_readable.js:643:5)
+172 error If you need help, you may report this log at:
+172 error     <http://github.com/isaacs/npm/issues>
+172 error or email it to:
+172 error     <npm-@googlegroups.com>
+173 error System Linux 2.6.32-696.18.7.el6.x86_64
+174 error command "node" "/usr/bin/npm" "install"
+175 error cwd /home/mh4722/opt/mh4722-final-project
+176 error node -v v0.10.48
+177 error npm -v 1.3.6
+178 verbose exit [ 1, true ]
