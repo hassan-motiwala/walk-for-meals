@@ -163,7 +163,7 @@ app.post('/users/location', (req, res) => {
 		}
 
 		else if(errObj.message.length === 0) {
-			res.redirect('users/location');
+			res.redirect('../users/location');
 		}
 	});
 
