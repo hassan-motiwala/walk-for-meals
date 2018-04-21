@@ -168,12 +168,44 @@ app.post('/users/location', (req, res) => {
 	});
 });
 
+
 /********************************************************************/
 
-app.get('restaurents/pickLocation', (req, res) => {
+app.get('restaurants/pickLocation', (req, res) => {
+	
+	let errObj = {message: ''};
 
+	if(req.session.userName) {
+		Location.find({}, function(err, results, count) {	
+			res.render('locations-pickup', {locations: results});
+		});
+	}
+	else {
+		res.render('userSignIn-Register', {error: "Please sign in/up first"});
+	}
+});
 
+app.post('/restaurants/pickLocation', (req, res) => {
 
+	let errObj = {message: ''};
+
+	const location = req.body.location;
+
+	new newLocation({
+		userName: req.session.userName,
+		location: req.body.location,
+		comments: req.body.comments,
+		restaurantId: ''
+	}).save(function(err, doc) {
+		if(err) {
+			errObj.message = "DOCUMENT SAVE ERROR";
+			res.render('locations-pickup', {message: errObj.message});		
+		}
+
+		else if(errObj.message.length === 0) {
+			res.redirect('../users/location');
+		}
+	});
 });
 
 /********************************************************************/
