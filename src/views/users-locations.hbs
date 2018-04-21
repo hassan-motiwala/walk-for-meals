@@ -2,7 +2,7 @@
 <link href="../../bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 <link href="../../bootstrap-3.3.7/docs/examples/justified-nav/justified-nav.css" rel="stylesheet">
 <script src="../../bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js"></script>
-
+<!--<script src="../../js/users-location.js"></script>-->
 
 <div class="container">
     <div class="masthead">
@@ -40,12 +40,12 @@
 
     <form name="addLocation" class="form-signin" action="../../users/location" method="POST">
       <h2 class="form-signin-heading">Add a location maybe?</h2>
-      <label for="userName" class="sr-only">Location</label>
-      <input type="text" class="form-control" name="location" placeholder="Username" required autofocus>
+      <label for="userName" class="sr-only" >Location</label>
+      <input type="text" class="form-control" id="location" name="location" placeholder="Location" required autofocus>
       <label for="comments" class="sr-only">Comments</label>
-      <input type="text" class="form-control" name="comments" placeholder="Any specific comments about location?" required>
+      <input type="text" class="form-control" id="comments" name="comments" placeholder="Any specific comments about location?" required>
       <div class="checkbox"> 
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" id="submitLocation">Submit</button>
     </form>
 
 
