@@ -17,6 +17,10 @@
       </nav>
     </div>
 
+    {{#if error}}
+      <h3>{{ error }}</h3>
+    {{/if}}
+    
     <table align="center" border="4" style="align-content: left;">
       <thead>
         <th style="align-content:center;">Username</th>
@@ -38,10 +42,6 @@
         {{/each}}
       </tbody>
     </table>
-
-    {{#if error}}
-      <h3>{{ error }}</h3>
-    {{/if}}
 
     <form name="addLocation" class="form-signin" action="../../restaurants/pickLocation" method="POST">
       <h2 class="form-signin-heading">Pick a location maybe?</h2>

@@ -3,6 +3,8 @@ require('./db');
 const auth = require('./auth.js');
 const mongoose = require('mongoose');
 
+const Promise = require('promise');
+
 const Restaurant = mongoose.model('Restaurant');
 const User = mongoose.model('User');
 const Location = mongoose.model('Location');
@@ -187,38 +189,80 @@ app.get('/restaurants/pickLocation', (req, res) => {
 
 app.post('/restaurants/pickLocation', (req, res) => {
 
-	let errObj = {message: ''};
-
 	const pickedLocation = req.body.location;
-	let locationCorrect = false;
+	console.log(pickedLocation);
 
-	Location.find({location: pickedLocation}, function(err, results, count) {	
-		if(results.length > 0) {
-			Restaurant.find({userName: req.session.userName}, function(err, restaurant, count) {
-				if(restaurant.length > 0) {
-					Location.updateOne({ location: pickedLocation }, { $set: {restaurantName: restaurant[0].userName} });
-					Restaurant.updateOne({ userName: req.session.userName },{ $set: {totalDeliveries: restaurant[0].totalDeliveries + 1} });
-					locationCorrect = true;
-				}
-				else if(restaurant.length === 0) {
-					console.log(restaurant);
-					console.log(results);
-					locationCorrect = false;
-				}
-			});
-		}
-		else if(results.length === 0) {
-			res.render('locations-pickup.hbs', {error: "Please pick a vaild location"});
-		}
-
-		if(locationCorrect === true) {
-			res.redirect('../restaurants/pickLocation');
-		}
-		else {
-			res.redirect('../');
-		}
+	const p1 = new Promise(function(fulfill, reject) {
+    	Location.find({location: pickedLocation}, function(err, result, count) {
+    		if(result.length > 0) {
+    			fulfill(result);
+    		}
+    		else if(result.length == 0) {
+    			reject("Please pick a valid location!");
+    		}
+    	});
 	});
 
+	const p2 = p1.then(function(result) {
+		return new Promise(function(fulfill, reject) {
+			Restaurant.find({userName: req.session.userName}, function(err, restaurant, count) {
+				if(restaurant.length > 0) {
+					fulfill(restaurant);
+				}
+				else if(restaurant.length === 0) {
+					reject("Please sign in as a restaurant");
+				}
+			});
+		});
+	});
+
+	const p3 = p2.then(function(restaurant) {
+		return new Promise(function(fulfill, reject) {
+			Location.update(
+				{"location": pickedLocation}, 
+				{$set: {restaurantName: restaurant[0].userName}}, 
+				function(err, doc) {
+					if(doc) {
+						console.log(doc);
+					}
+					else if(err) {
+						console.log(err);
+					}
+				}
+			);
+			Restaurant.update(
+				{"userName": req.session.userName },
+				{$set: {totalDeliveries: restaurant[0].totalDeliveries + 1}},
+				function(err, doc) {
+					if(doc) {
+						console.log(doc);
+					}
+					else if(err) {
+						consoel.log(err);
+					}
+				}
+			);
+			fulfill('Location added successfully');
+		});
+	});
+
+	p3.then(function(message) {
+		Location.find({}, function(err, result, count) {	
+			res.render('locations-pickup', {locations: result, error: message});
+		});
+	});
+
+	p1.catch(function(val) {
+		Location.find({}, function(err, result, count) {	
+			res.render('locations-pickup', {locations: result, error: val});
+		});
+	});
+
+	p2.catch(function(val) {
+		Location.find({}, function(err, result, count) {	
+			res.render('locations-pickup', {locations: result, error: val});
+		});
+	});
 });
 
 /********************************************************************/
