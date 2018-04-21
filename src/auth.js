@@ -68,7 +68,8 @@ function register(user, errorCallback, successCallback, fullName, userName, emai
 							userName: userName, 
 							email: email, 
 							password: hash,
-							contact: contact
+							contact: contact,
+							totalDeliveries: 0
 						}).save(function(err, doc) {
 							if(err) {
 							errObj.message = "DOCUMENT SAVE ERROR";

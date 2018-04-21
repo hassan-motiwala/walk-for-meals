@@ -155,7 +155,7 @@ app.post('/users/location', (req, res) => {
 		userName: req.session.userName,
 		location: req.body.location,
 		comments: req.body.comments,
-		restaurantId: ''
+		restaurantName: ''
 	}).save(function(err, doc) {
 		if(err) {
 			errObj.message = "DOCUMENT SAVE ERROR";
@@ -171,7 +171,7 @@ app.post('/users/location', (req, res) => {
 
 /********************************************************************/
 
-app.get('restaurants/pickLocation', (req, res) => {
+app.get('/restaurants/pickLocation', (req, res) => {
 	
 	let errObj = {message: ''};
 
@@ -181,7 +181,7 @@ app.get('restaurants/pickLocation', (req, res) => {
 		});
 	}
 	else {
-		res.render('userSignIn-Register', {error: "Please sign in/up first"});
+		res.render('restaurantSignIn-Register', {error: "Please sign in/up first"});
 	}
 });
 
@@ -189,23 +189,36 @@ app.post('/restaurants/pickLocation', (req, res) => {
 
 	let errObj = {message: ''};
 
-	const location = req.body.location;
+	const pickedLocation = req.body.location;
+	let locationCorrect = false;
 
-	new newLocation({
-		userName: req.session.userName,
-		location: req.body.location,
-		comments: req.body.comments,
-		restaurantId: ''
-	}).save(function(err, doc) {
-		if(err) {
-			errObj.message = "DOCUMENT SAVE ERROR";
-			res.render('locations-pickup', {message: errObj.message});		
+	Location.find({location: pickedLocation}, function(err, results, count) {	
+		if(results.length > 0) {
+			Restaurant.find({userName: req.session.userName}, function(err, restaurant, count) {
+				if(restaurant.length > 0) {
+					Location.updateOne({ location: pickedLocation }, { $set: {restaurantName: restaurant[0].userName} });
+					Restaurant.updateOne({ userName: req.session.userName },{ $set: {totalDeliveries: restaurant[0].totalDeliveries + 1} });
+					locationCorrect = true;
+				}
+				else if(restaurant.length === 0) {
+					console.log(restaurant);
+					console.log(results);
+					locationCorrect = false;
+				}
+			});
+		}
+		else if(results.length === 0) {
+			res.render('locations-pickup.hbs', {error: "Please pick a vaild location"});
 		}
 
-		else if(errObj.message.length === 0) {
-			res.redirect('../users/location');
+		if(locationCorrect === true) {
+			res.redirect('../restaurants/pickLocation');
+		}
+		else {
+			res.redirect('../');
 		}
 	});
+
 });
 
 /********************************************************************/

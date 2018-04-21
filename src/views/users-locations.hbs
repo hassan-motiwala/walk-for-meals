@@ -18,20 +18,22 @@
     </div>
 
     <table align="center" border="4" style="align-content: left;">
+      <thead>
+        <th style="align-content:center;">Username</th>
+        <th style="align-content:center;">Location</th>
+        <th style="align-content:center;">Comments</th>
+        <th style="align-content:center;">Restaurant Name (if picked for delivery)</th>
+      </thead>
       <tbody> 
         {{#each locations}}            
           <tr>    
-              <th style="align-content:center;" scope="row">User name</th>
               <td>{{ userName }}</td>
 
-              <th style="align-content:center;" scope="row">Location</th>
               <td>{{ location }}</td>
 
-              <th style="align-content:center;" scope="row">Comments</th>
               <td>{{ comments }}</td>
 
-              <th style="align-content:center;" scope="row">Restaurant ID</th>
-              <td>{{ restaurantId }}</td>
+              <td>{{ restaurantName }}</td>
           </tr>
         {{/each}}
       </tbody>

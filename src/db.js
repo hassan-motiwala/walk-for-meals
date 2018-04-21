@@ -17,14 +17,14 @@ const Restaurant = new mongoose.Schema({
 	password: {type: String, required: true},
 	contact: String,
 	location: String,
-	totalDeliveries: String
+	totalDeliveries: Number
 });
 
 const Location = new mongoose.Schema({
 	userName: String,
 	location: String,
 	comments: String,
-	restaurantId: String
+	restaurantName: String
 });
 
 const Discount = new mongoose.Schema({
