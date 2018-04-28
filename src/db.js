@@ -24,7 +24,6 @@ const Location = new mongoose.Schema({
 	userName: String,
 	location: String,
 	comments: String,
-	address: String,
 	restaurantName: String
 });
 

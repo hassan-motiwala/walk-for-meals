@@ -36,6 +36,8 @@ const publicPath = path.resolve(__dirname, "public");
 app.use(express.static(publicPath));
 
 
+/********************************************************************/
+
 //GET / ROUTE
 app.get('/', (req, res) => {
 	res.render('index');
@@ -74,7 +76,6 @@ app.get('/user/signIn', (req, res) => {
 	res.render('userSignIn-Register');
 });
 
-/********************************************************************/
 
 //POST USER/SIGNIN
 app.post('/user/signIn', (req, res) => {
@@ -94,6 +95,7 @@ app.post('/user/signIn', (req, res) => {
 	auth.login('user', req.body.userName, req.body.password, error, success);
 });
 
+/********************************************************************/
 
 //POST USER REGISTER
 app.post('/user/register', (req, res) => {
@@ -120,8 +122,6 @@ app.get('/restaurant/signIn', (req, res) => {
 	res.render('restaurantSignIn-Register');
 });
 
-/********************************************************************/
-
 //POST RESTAURANT/LOGIN
 app.post('/restaurant/signIn', (req, res) => {
 	let error = function(errObj) {
@@ -139,6 +139,8 @@ app.post('/restaurant/signIn', (req, res) => {
 
 	auth.login('restaurant', req.body.userName, req.body.password, error, success);
 });
+
+/*************************************************************/
 
 //POST RESTAURANT/REGISTER
 app.post('/restaurant/register', (req, res) => {

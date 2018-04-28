@@ -3,18 +3,20 @@
 
 ## Overview
 
-This web application will partner with restaurents to fight hunger among homeless people. Pedestrians will add the locations of homeless people they encounter on the streets and after 10 commits, they can avail a discount of 10% in any of the partnering
-restaurents. Restaurents on the other hand will use the locations provided by pedestrians to identify homeless people in their neighborhood and supply a fixed number of meals to to them throughtout the day.
+This web application will partner with restaurents to fight hunger on the streets of New York. Pedestrians will add the locations of homeless people they encounter on the streets. Restaurents on the other hand will use the database provided by pedestrians to deliver fresh food throughtout the day.
 
 NOTE: I will be using the word 'user' for 'pedestrian'.
 
 ## Data Model
 
-The application will store Users (pedestrians), Restaurents and Location.
+The application will have the follwing Schemas:
+- Users (pedestrians)
+- Restaurants
+- Location.
 
-* userId and restaurentId for both the collections will be used for referencing the locations (another collection).
-* locations will have userId's of a user for referencing. RestaurentId of a restaurent will be added to locations once the restaurent pickups up that location to deliver food.
-* discounts will have a userId to reference it to the user who earned the discount. 
+There will be no embedded schemas, the objectID will be used to reference each other. Namely, the objectId for users and restaurants.
+
+* locations will have userName of a user for who added the location. Restaurant's userName will be added to locations once the restaurant pickups up that location to deliver food.
 
 An Example User:
 
@@ -28,20 +30,21 @@ An Example User:
   totalCommits: //Incrementing on every commit.
 }
 
-```restaurent {
-  restaurentId: //generated
-  restaurentName: 'Bistro Cafe',
+```restaurant {
+  restaurantId: //generated
+  restaurantName: 'Bistro Cafe',
+  userName: 'bistroCafe'
   hash: // a password hash,
-  email: bistrocafe@gmail.com,
-  location:     
-  totalDeliveries: //Incrementing on every commit.
+  email: 'bistrocafe@gmail.com',
+  location: '123 Freedom Street, NY',    
+  totalDeliveries: //Increments on every delivery.
 }
 
 ```location {
-  userId: //referencing the user who added this location,
+  userName: //referencing the user who added this location,
   location: //exact location,
   comments: //additional comments on where the user spotted the homeless people specifically/outfit,
-  restaurentId: //added only when restaurent picks the location to deliver food. 
+  restaurantName: //Will be added only when restaurant picks the location to deliver food. 
 }
 
 ```discount {
@@ -63,57 +66,51 @@ An Example User:
 
 ![home page](documentation/homePage.jpg)
 
-/about/us - About Us 
+/aboutUs - About Us 
 
 ![about us](documentation/aboutUs.jpg)
 
-/user/login - User login
+/user/signIn-Up - User login-Register
 
-![user login](documentation/userLogin.jpg)
+![user signIn/Up](documentation/user_signIn-Up.jpg)
 
-/restaurent/login - restaurent login 
+/restaurant/signIn-Up - restaurant/signIn-Up 
 
-![restaurent login](documentation/restaurentLogin.jpg)
+![restaurant signIn-Up](documentation/restaurant_signIn-Up.jpg)
 
-/user/register - User registration
+/all/restaurants - User all/restaurants
 
-![user register](documentation/userRegister.jpg)
+![all/restaurants](documentation/all_restaurants.jpg)
 
-/restaurent/register - restaurent registeration 
+/users/locations - user/locations 
 
-![restaurent registration](documentation/restaurentRegister.jpg)
-
-/user/location/add - User location add
-
-![user location add](documentation/userLocationAdd.jpg)
-
-/restaurent/location/pick - restaurent location pick 
-
-![restaurent location pick](documentation/restaurentLocationPick.jpg)
+![user/locations](documentation/restaurants_pickLocation.jpg)
 
 
 ## Site map
 
-![site map](documentation/siteMap.png)
+![site map](documentation/siteMap.jpg)
 
 
 ## User Stories or Use Cases
 
-1. as non-registered user or restaurent, I can register a new account with the site.
-2. as a user/restaurent, I can log in to the site.
-3. as a user/restaurent, I can add a new location OR pick a location (depending on whether user or restaurent).
-4. as a user, I can view all of the grocery lists I've created in a single list
-5. as a user, I can add items to an existing grocery list
-6. as a user, I can cross off items in an existing grocery list
+1. as non-registered user or restaurant, I can register a new account with the site.
+2. as a registered user/restaurant, I can log in to the site.
+3. as a registered user/restaurant, I can add a new location OR pick a location respectively.
+4. cannot access users/location without signing in.
+5. cannot access restaurants/pickLocation without signin in.
 
 ## Research Topics
 
 	* Google Maps API
 	* Bootstrap
+	* Promises
 
 10 points total out of 8 required points
 
-## [Link to Initial Main Project File](app.js) 
+## [Link to Initial Main Project File](app.js)
+* http://linserv2.cims.nyu.edu:15181/
 
 ## Annotations / References Used
-
+https://developers.google.com/maps/documentation/geocoding/intro
+https://www.youtube.com/watch?v=pRiQeo17u6c
