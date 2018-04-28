@@ -57,9 +57,7 @@ function geocodeAddress(geocoder, resultsMap) {
 					infoWindow.open(resultsMap, marker);
 				});
 
-		  	} else {
-		    	alert('Geocode was not successful for the following reason: ' + status);
-		 	}
+		  	}
 		});
 		index++;
 	}
