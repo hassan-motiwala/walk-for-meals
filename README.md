@@ -104,7 +104,6 @@ An Example User:
 
 	* Google Maps API
 	* Bootstrap
-	* Promises
 
 10 points total out of 8 required points
 
