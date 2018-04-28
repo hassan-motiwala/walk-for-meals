@@ -1,5 +1,4 @@
 (Title - Walk for Meals)
-(Tagline - Fighting hunger on the streets)
 
 ## Overview
 
