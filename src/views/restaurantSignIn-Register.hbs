@@ -10,9 +10,9 @@
   <h3 class="text-muted" style="text-align: center; font-size: 45px;">Walk for Meals</h3>
   <nav>
     <ul class="nav nav-justified">
-      <li><a href="../">Home</a></li>
+      <li><a href="../../">Home</a></li>
       <li><a href="../../user/signIn">User Login/Sign Up</a></li>
-      <li><a href= "#">About Us</a></li>
+      <li><a href= "../../aboutUs">About Us</a></li>
       <li class = "active"><a href="../../restaurant/signIn">Restaurant Login/Sign Up</a></li>
       <li><a href="../../users/location">User's Contributions</a></li>
     </ul>
@@ -40,11 +40,12 @@
 <form class="form-register" action="../../restaurant/register" method="POST">
   <h2 class="form-signin-heading">Please register if you are new</h2>
   <label for="restaurantName" class="sr-only">Restaurant Name</label>
+
   <input type="text" class="form-control" name="restaurantName" placeholder="Restaurant Name" required autofocus>
   
   <label for="userName" class="sr-only">Username</label>
   <input type="text" class="form-control" name="userName" placeholder="Username | Atleast 8 characters" required autofocus>
-  
+
   <label for="email" class="sr-only">Email address</label>
   <input type="email" class="form-control" name="email" placeholder="Email address" required autofocus>
   
@@ -58,4 +59,9 @@
   <input type="text" class="form-control" name="location" placeholder="Location" required>
   
   <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+
+
+  <footer class="footer">
+        <p>&copy; Walk for Meals, Inc.</p>
+    </footer>
 </form>

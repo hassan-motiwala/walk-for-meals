@@ -43,6 +43,32 @@ app.get('/', (req, res) => {
 
 /********************************************************************/
 
+//GET /RESTAURANTS/LOCATION ROUTE
+app.get('/restaurants/location', (req, res) => {
+	Restaurant.find({}, function(err, results, count) {
+		console.log(results);
+		res.json(results);
+	});
+});
+
+/*******************************************************************/
+
+//GET /ALL/RESTAURANTS ROUTE
+app.get('/all/restaurants', (req, res) => {
+	Restaurant.find({}, function(err, results, count) {
+		res.render('all-restaurants', {restaurants: results});
+	});
+});
+
+/********************************************************************/
+
+//GET /ABOUTUS ROUTE
+app.get('/aboutUs', (req, res) => {
+	res.render('aboutUs');
+});
+
+/********************************************************************/
+
 //GET USER/SIGNIN ROUTE
 app.get('/user/signIn', (req, res) => {
 	res.render('userSignIn-Register');
@@ -129,7 +155,7 @@ app.post('/restaurant/register', (req, res) => {
 		res.render('userSignIn-Register', {error: errObj.message});
 	}
 
-	auth.register('restaurant', error, success, req.body.fullName, req.body.userName, req.body.email, req.body.password, req.body.contact);
+	auth.register('restaurant', error, success, req.body.restaurantName, req.body.userName, req.body.email, req.body.password, req.body.contact, req.body.location);
 });
 
 
@@ -165,7 +191,9 @@ app.post('/users/location', (req, res) => {
 		}
 
 		else if(errObj.message.length === 0) {
-			res.redirect('../users/location');
+			Location.find({location: req.body.location, comments: req.body.comments}, function(err, results, count) {	
+				res.json(results[0]);
+			});
 		}
 	});
 });

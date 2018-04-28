@@ -6,7 +6,7 @@ const Restaurant = mongoose.model('Restaurant');
 let newRestaurant = mongoose.model('Restaurant');
 
 
-function register(user, errorCallback, successCallback, fullName, userName, email, password, contact) {
+function register(user, errorCallback, successCallback, fullName, userName, email, password, contact, address) {
 
 	let collection;
 	let newCollection;
@@ -22,7 +22,7 @@ function register(user, errorCallback, successCallback, fullName, userName, emai
 
 	//Check for the length of userName and password.
 	if(userName.length<8 || password.length<8) {
-		errObj.message = "userName PASSWORD TOO SHORT";
+		errObj.message = "USERNAME PASSWORD TOO SHORT";
 		errorCallback(errObj);	
 	}
 	//Check if the userName alrwady exists.
@@ -30,7 +30,7 @@ function register(user, errorCallback, successCallback, fullName, userName, emai
 		collection.find({userName: userName}, function(err, result, count) {  
 	 	
 		 	if(result.length > 0) {
-				errObj.message = "userName ALREADY EXISTS";
+				errObj.message = "USERNAME ALREADY EXISTS";
 				errorCallback(errObj);
 			}
 
@@ -69,6 +69,7 @@ function register(user, errorCallback, successCallback, fullName, userName, emai
 							email: email, 
 							password: hash,
 							contact: contact,
+							address: address,
 							totalDeliveries: 0
 						}).save(function(err, doc) {
 							if(err) {

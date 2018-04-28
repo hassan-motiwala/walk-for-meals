@@ -2,6 +2,13 @@
 <link href="../../bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 <link href="../../bootstrap-3.3.7/docs/examples/justified-nav/justified-nav.css" rel="stylesheet">
 <script src="../../bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js"></script>
+<style>
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+</style>
+
 
 <div class="container">
     <div class="masthead">
@@ -16,39 +23,37 @@
         </ul>
       </nav>
     </div>
-
-    {{#if error}}
-      <h3>{{ error }}</h3>
-    {{/if}}
     
+    <h2 style="text-align: center;">Our partnering restaurants who take great pride in what they do!</h2>
+
     <table align="center" border="4" style="align-content: left;">
       <thead>
-        <th style="align-content:center;">Username</th>
+        <th style="align-content:center;">Restaurant Name</th>
         <th style="align-content:center;">Location</th>
-        <th style="align-content:center;">Comments</th>
-        <th style="align-content:center;">Restaurant Name (if picked for delivery)</th>
+        <th style="align-content:center;">Total Deliveries</th>
       </thead>
       <tbody> 
-        {{#each locations}}            
+        {{#each restaurants}}            
           <tr>    
-              <td>{{ userName }}</td>
-
-              <td>{{ location }}</td>
-
-              <td>{{ comments }}</td>
-
               <td>{{ restaurantName }}</td>
+
+              <td>{{ address }}</td>
+
+              <td>{{ totalDeliveries }}</td>
           </tr>
         {{/each}}
       </tbody>
     </table>
 
-    <form name="addLocation" class="form-signin" action="../../restaurants/pickLocation" method="POST">
-      <h2 class="form-signin-heading">Pick a location maybe?</h2>
-      <label for="userName" class="sr-only" >Location</label>
-      <input type="text" class="form-control" id="location" name="location" placeholder="Location" required autofocus>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" id="pickLocation">Submit</button>
-    </form>
+    <div class="jumbotron">
+      <h2>Locations of our partnering Restaurants in New York!</h2>
+      <div id="map"></div>
+      
+      <script src="../js/googlemaps.js"></script>
+      <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDz-nbw5EVKIvpxrq9muqmN3swwLJIA0Jc&callback=getData">
+      </script>
+    </div>
 
     <footer class="footer">
         <p>&copy; Walk for Meals, Inc.</p>

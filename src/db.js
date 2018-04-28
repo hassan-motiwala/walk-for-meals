@@ -16,7 +16,7 @@ const Restaurant = new mongoose.Schema({
 	email: {type: String, required: true},
 	password: {type: String, required: true},
 	contact: String,
-	location: String,
+	address: String,
 	totalDeliveries: Number
 });
 
@@ -24,6 +24,7 @@ const Location = new mongoose.Schema({
 	userName: String,
 	location: String,
 	comments: String,
+	address: String,
 	restaurantName: String
 });
 
