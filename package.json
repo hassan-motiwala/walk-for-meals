@@ -29,7 +29,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nyu-csci-ua-0480-008-spring-2018/mh4722-final-project.git"
+    "url": "https://github.com/hassan3095/walk-for-meals.git"
   },
   "keywords": [
     "web",
