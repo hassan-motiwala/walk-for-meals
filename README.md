@@ -2,13 +2,13 @@
 
 ## Overview
 
-This web application will partner with restaurents to fight hunger on the streets of New York. Pedestrians will add the locations of homeless people they encounter on the streets. Restaurents on the other hand will use the database provided by pedestrians to deliver fresh food throughtout the day.
+This web application will partner with restaurants to fight hunger on the streets of New York. Pedestrians will add the locations of homeless people they encounter on the streets. Restaurants on the other hand will use the database provided by pedestrians to deliver fresh food throughtout the day.
 
 NOTE: I will be using the word 'user' for 'pedestrian'.
 
 ## Data Model
 
-The application will have the follwing Schemas:
+The application will have the following Schemas:
 - Users (pedestrians)
 - Restaurants
 - Location.
